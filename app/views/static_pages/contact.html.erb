@@ -1,0 +1,57 @@
+<% provide(:title, 'Contact Us') %>
+
+ 
+    <div id="form">
+   
+     <h2 style= "font-family: bitterregular, gill sans, arial, helvetica, sans-serif;color: white;">How To Get in Touch</h2>
+       <div id="contact">  
+        <form name="contactUs" action=""  onsubmit="return validate()" method="post">
+            <p> 
+             <input type = "hidden" name = "recipient" value = "info@cleanerfloors.ie"/> 
+             <input type = "hidden" name = "subject" value = "feedback"/> 
+             <input type = "hidden" name = "redirect" value = "index.html"/>  
+            </p>  
+            <p>
+            <h3><strong>Drop us a Mail</strong></h3>         
+            </p>
+            
+            <label>Your Name:<br/>
+            <input name="name" type="text" value="" onkeyup="confirmation()"/>
+            </label><div id = "nameError" class = "errorMessage"></div>
+            <br/>
+            
+            <label>Your Phonenumber:<br/>
+            <input name="telephone" type="text" value="" onkeyup="confirmation()"/>
+            </label><div id = "phoneError" class = "errorMessage"></div>
+            <br/>
+            
+            <label>Your Email Address:<br/>
+            <input name="email" type="text"  value="" onkeyup="confirmation()"/>
+            </label>
+            <div id = "emailError" class = "errorMessage"></div>
+            <div id = "emailFormatError" class = "errorMessage"></div> 
+            <p>
+            <label>Your Query:</label><br />
+            <textarea name="query" rows="5" cols="30" onkeyup="confirmation()">Enter query here.</textarea>
+            <div id = "queryError" class="errorMessage"></div>
+            </p>
+            <p>
+            <br/>
+            <input name="submit" type="submit" value="Send" />
+            <input name="clear" type="reset" value="Clear"/>
+            <div id = "confirmationMsg" class="errorMessage"></div>
+            </p>
+        </form>
+       </div>
+    
+   <div id="address">       
+    <p><h3><strong>Our Address</strong></h3></p>
+    <p>74 Ballsbridge Ave.</p>
+    <p>Ballsbridge</p>
+    <p>Dublin 4</p>
+    <p><strong>tel:</strong>084622887</p>
+    <p><strong>fax:</strong>084622886</p>
+    <p><strong>email:</strong><a href="mailto:info@sovietcleaners.ie" class="white">info@sovietcleaners.ie</a></p>
+   </div> 
+
+</div>

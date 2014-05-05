@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="header">
+    <div id="logo"><%= link_to image_tag('/assets/logo.png'), root_path %></div>
+    <div id="feeds"><a href="xml/new_products.xml"><img img border="0"  src="/assets/feed-icon.png"/></a></div>
+    <div id= "menu">Menu 
+      <%= link_to "Home", root_path%>
+      <%= link_to "Goods", goods_path %>
+      <%= link_to "Contact", contact_path %>
+    </div>
+    <div id="welcomeMessage"></div>
+  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>
+
+  
+<!--
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div id="content">
+          <%= link_to "sample app", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Help",    '#' %></li>
+              <li><%= link_to "Sign in", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <a href="home"><img img border="0" src="/assets/logo.png" alt="Soviet Cleaners" width="220" height="210"/></a>
