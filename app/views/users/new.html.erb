@@ -1,5 +1,25 @@
-<% provide(:title, 'Login') %>
+<% provide(:title, "Login") %>
 
 
-<h1>Login</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+  
+<div id="content">
+  <h2>Please login to continue.</h2>
+  
+  <form id='login' action='checklogin.php' method='post' accept-charset='UTF-8'>
+    <fieldset >
+      <legend>Login</legend>
+      
+      <label for='username' >UserName*:</label>
+      <input type='text' name='username' id='username'  maxlength="30" />
+      
+      <label for='password' >Password*:</label>
+      <input type='password' name='password' id='password' maxlength="30" />
+      
+      <input type='submit' name='Submit' value='Login' />
+      
+    </fieldset>
+  </form>
+  
+
+</br>
