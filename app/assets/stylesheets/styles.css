@@ -202,11 +202,6 @@ position: absolute;;
 left:200px;
 text-align: left;}
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
-
 #left {
     float: left;
     padding: 10px 2% 10px 2%;
@@ -262,7 +257,7 @@ text-align: left;}
 }.RegisterButton:active {
     position:relative;
     top:1px;
-}</style>
+}
 
 
 
