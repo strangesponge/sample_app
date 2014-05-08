@@ -1,9 +1,16 @@
 SampleApp::Application.routes.draw do
+  get "products/new"
+resources :products
   get "users/new"
+  
+  resources :users
+  
   root 'static_pages#home'
   match '/goods',    to: 'static_pages#goods',    via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/login', to: 'users#new', via: 'get'
+
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

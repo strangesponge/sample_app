@@ -1,15 +1,49 @@
-<% provide(:title, "Login") %>
+
+<% provide(:title, 'Login') %>
 
 
+<%= form_for(@user) do |f| %>
+    
 
-  
+
+<div id="bodyContent">
+
+
+<h3>First time here? Please register to continue</h3>
+    
+<div id="left">    
+      <%= f.label :name %>
+<p/>
+      <%= f.text_field :name %>
+<p/>
+      <%= f.label :email %>
+<p/>
+      <%= f.text_field :email %>
+<p/>
+      <%= f.label :password %>
+<p/>
+      <%= f.password_field :password %>
+<p/>
+      <%= f.label :password_confirmation, "Confirmation" %>
+<p/>
+      <%= f.password_field :password_confirmation %>
+<p/>
+<br/>
+      <%= f.submit "Register", class: "RegisterButton" %>
+    
+</div>
+<br/>
+<%= render 'shared/error_messages' %>
+<% end %>
+</div>
+<!--
 <div id="content">
   <h2>Please login to continue.</h2>
   
   <form id='login' action='checklogin.php' method='post' accept-charset='UTF-8'>
     <fieldset >
       <legend>Login</legend>
-      
+
       <label for='username' >UserName*:</label>
       <input type='text' name='username' id='username'  maxlength="30" />
       
@@ -20,6 +54,10 @@
       
     </fieldset>
   </form>
-  
 
-</br>
+  
+<h3> </h3>
+
+      
+
+</div>
