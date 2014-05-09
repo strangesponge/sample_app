@@ -1,0 +1,22 @@
+
+<div id="bodyContent">
+<h3>Please Login to continue</h3>
+<div id="login">
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+<p/>
+      <%= f.text_field :email %>
+<p/>
+      <%= f.label :password %>
+<p/>
+      <%= f.password_field :password %>
+<p/>
+<br/>
+
+      <%= f.submit "Sign in", class: "RegisterButton" %>
+      
+    <% end %>
+</div>
+</div>

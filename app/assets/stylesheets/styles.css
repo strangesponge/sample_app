@@ -40,7 +40,7 @@ h2           {font-family: bitterbold, "gill sans", arial, helvetica, sans-serif
               color: white;}
 
 h3           {font-family: bitterbold, "gill sans", arial, helvetica, sans-serif;
-              color: white;}
+              color: white; text-align: left;   }
                 
 th           {font-family: bitterbold;
                color: white;}
@@ -176,6 +176,7 @@ text-align: left;}
     voice-family:inherit;
     width: 41%;
     text-align: left;
+
     }
 
 #right {
@@ -193,19 +194,6 @@ text-align: left;}
 
 .RegisterButton {
     background-color:#ffcc33;
-    -webkit-border-top-left-radius:0px;
-    -moz-border-radius-topleft:0px;
-    border-top-left-radius:0px;
-    -webkit-border-top-right-radius:0px;
-    -moz-border-radius-topright:0px;
-    border-top-right-radius:0px;
-    -webkit-border-bottom-right-radius:0px;
-    -moz-border-radius-bottomright:0px;
-    border-bottom-right-radius:0px;
-    -webkit-border-bottom-left-radius:0px;
-    -moz-border-radius-bottomleft:0px;
-    border-bottom-left-radius:0px;
-    text-indent:0px;
     border:1px solid #ffb433;
     display:inline-block;
     color:#ffffff;
@@ -241,6 +229,14 @@ border: 2px outset #d7b9c9
 }
 
 
+#login
+{position: relative;
+    padding: 10px 2% 10px 2%;
+    margin: 20px 1% 20px 2%;
+    width: 44%; 
+text-align: left;}
 
-
- 
+ #register
+{position: relative;
+ top: 30px;   
+text-align: center;}
