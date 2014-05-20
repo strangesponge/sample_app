@@ -1,22 +1,17 @@
+<% provide(:title,) %>
 
-<div id="bodyContent">
-<h3>Please Login to continue</h3>
-<div id="login">
+<div id="content">
 
-<%= form_for(:session, url: sessions_path) do |f| %>
+<h1>Log In</h1>
 
-      <%= f.label :email %>
-<p/>
-      <%= f.text_field :email %>
-<p/>
-      <%= f.label :password %>
-<p/>
-      <%= f.password_field :password %>
-<p/>
-<br/>
-
-      <%= f.submit "Sign in", class: "RegisterButton" %>
-      
-    <% end %>
-</div>
-</div>
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+  <div class="register"><%= submit_tag "Log In" %></div>
+<% end %>

@@ -1,22 +1,21 @@
 SampleApp::Application.routes.draw do
-  get "products/new"
-  get "users/new"
-
-  resources :sessions, only: [:new, :create, :destroy]
-  
-  
-  
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :users
+  resources :sessions
   resources :products
 
   root 'static_pages#home'
   match '/goods',    to: 'static_pages#goods',    via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/register', to: 'users#new', via: 'get'
-  match '/login',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
-  match '/catalog',  to: 'products#show',         via: 'get'
+
+
+  match '/catalogue',  to: 'products#show',         via: 'get'
+  match '/kitchenspray',  to: 'products#kitchenspray',         via: 'get'
+  match '/wipes',  to: 'products#wipes',         via: 'get'
+  match '/floorcleaner',  to: 'products#floorcleaner',         via: 'get'
 
  
   # The priority is based upon order of creation: first created -> highest priority.

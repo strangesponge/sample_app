@@ -1,5 +1,22 @@
-<h1>Products#show</h1>
-<p>
-<%= @product.product %>
+<% provide(:title, 'Product Catalogue') %>
+
+<div id="content">
+
+<p><% if current_user %>
+	<h1>Product Catalogue</h1>
+    <table table style= "font-family: bitterregular, 'gill sans', arial, helvetica, sans-serif;color: white;" border="1.5" width="50%">
+    	<tr>
+    		<th>Product</th>
+             <th>Price</th>
+             <tr>
+    		<td>
+    		<%= @product.product %>	
+    		</td>
+    	</tr>
+    </table>
+  <% else %>
+   Please <%= link_to "login", login_path, :class => "nodec"%> or <%= link_to "register", signup_path, :class => "nodec"%> to view our Product Catalogue.
+  <% end %>
+
 <p/>
-<%= link_to "Sign out", signout_path, method: "delete" %>
+</div>
