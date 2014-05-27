@@ -1,22 +1,46 @@
 <% provide(:title, 'Product Catalogue') %>
 
-<div id="content">
+<div id="bodyContent">
 
 <p><% if current_user %>
-	<h1>Product Catalogue</h1>
-    <table table style= "font-family: bitterregular, 'gill sans', arial, helvetica, sans-serif;color: white;" border="1.5" width="50%">
-    	<tr>
-    		<th>Product</th>
-             <th>Price</th>
-             <tr>
-    		<td>
-    		<%= @product.product %>	
-    		</td>
-    	</tr>
-    </table>
-  <% else %>
-   Please <%= link_to "login", login_path, :class => "nodec"%> or <%= link_to "register", signup_path, :class => "nodec"%> to view our Product Catalogue.
-  <% end %>
+	<h2>Product Catalogue</h1>
+		<div id="table">
+			<table table style= "font-family: bitterregular, 'gill sans', arial, helvetica, sans-serif;color: white;" border="1.5" width="50%">
+			<tr>
+				<th>Product</th>
+				<th>Price</th>
+			<tr>
+				<td>
+				<%= link_to @cleaner.product, @cleaner.url, :class => "nodec"%>	
+				</td>
+				<td>
+				€<%= @spray.price %> 
+			</td>
+			</tr>
 
-<p/>
+			<tr>
+				<td>
+				<%= link_to @spray.product, @spray.url, :class => "nodec"%>	
+				</td>
+				<td>
+				€<%= @spray.price %> 
+			</td>
+			</tr> 
+			 
+			 <tr>
+				<td>
+				<%= link_to @wipes.product, @wipes.url, :class => "nodec"%>	
+				</td>
+				<td>
+				€<%= @wipes.price %> 
+			</td>
+			</tr>
+
+		</table>
+		</div>
+	<% else %>
+	 Please <%= link_to "login", login_path, :class => "nodec"%> or <%= link_to "register", signup_path, :class => "nodec"%> to view our Product Catalogue.
+	<% end %>
+
+
 </div>

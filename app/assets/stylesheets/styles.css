@@ -25,6 +25,8 @@ body       {background-color:#cc4b33;
 strong      {font-family: bitterregular, "gill sans", arial, helvetica, sans-serif;
              color:#ffcc33}
 
+.yellow     {color: #ffcc33;}
+
 a.nodec     {color: #ffcc33; text-decoration: none; }
 
 a.white     {color:white;}
