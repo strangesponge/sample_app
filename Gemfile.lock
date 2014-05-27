@@ -70,6 +70,7 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
+    pg (0.15.1)
     polyglot (0.3.4)
     protected_attributes (1.0.7)
       activemodel (>= 4.0.1, < 5.0)
@@ -160,6 +161,7 @@ DEPENDENCIES
   growl (= 1.0.3)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  pg (= 0.15.1)
   protected_attributes
   rails (= 4.0.4)
   rails_12factor (= 0.0.2)
